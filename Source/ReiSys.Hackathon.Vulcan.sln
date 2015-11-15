@@ -1,0 +1,145 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Data", "ReiSys.Hackathon.Vulcan.Data\ReiSys.Hackathon.Vulcan.Data.csproj", "{274B0A17-6BF0-4BC7-9F67-52EBA656C798}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Core", "ReiSys.Hackathon.Vulcan.Core\ReiSys.Hackathon.Vulcan.Core.csproj", "{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Domain", "ReiSys.Hackathon.Vulcan.Domain\ReiSys.Hackathon.Vulcan.Domain.csproj", "{540453A4-96A4-47FF-8060-47199981416E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Infrastructure", "ReiSys.Hackathon.Vulcan.Infrastructure\ReiSys.Hackathon.Vulcan.Infrastructure.csproj", "{23277659-1E67-4D37-A884-43B164672845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Service", "ReiSys.Hackathon.Vulcan.Services\ReiSys.Hackathon.Vulcan.Service.csproj", "{2679AFAC-C23E-411A-815B-C3B7EE6B7731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Web", "ReiSys.Hackathon.Vulcan.Web\ReiSys.Hackathon.Vulcan.Web.csproj", "{527FDC95-B2F3-4306-8530-F6AFBB73688D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.TypeScript", "ReiSys.Hackathon.Vulcan.TypeScript\ReiSys.Hackathon.Vulcan.TypeScript.csproj", "{31869AD3-A95C-495F-8B2F-4A607A16A17D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Business", "Business", "{954542E2-4B6A-4F8D-9D96-1115F04F4701}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A9F7E3F7-6F14-4EB9-92C9-FDE0C9625B26}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{79820606-E46A-46D8-9279-491A5053F518}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{65A94A21-591F-4583-9093-0CABAA006312}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{83E74A27-21D3-404F-A6E9-A855BC6211E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Api", "ReiSys.Hackathon.Vulcan.Api\ReiSys.Hackathon.Vulcan.Api.csproj", "{8FE8FADF-C731-481D-838F-0F8A9CE9F74A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReiSys.Hackathon.Vulcan.Tests", "ReiSys.Hackathon.Vulcan.Tests\ReiSys.Hackathon.Vulcan.Tests.csproj", "{426CB58A-C226-4E46-85AE-1704D307AA69}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5F73D5F7-F6E0-4C1A-A9DC-7F1D7DE15535}"
+	ProjectSection(SolutionItems) = preProject
+		reisys-hackathon2015-vulcan-dev.azurewebsites.net.PublishSettings = reisys-hackathon2015-vulcan-dev.azurewebsites.net.PublishSettings
+		sonar-project.properties = sonar-project.properties
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{274B0A17-6BF0-4BC7-9F67-52EBA656C798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{274B0A17-6BF0-4BC7-9F67-52EBA656C798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{274B0A17-6BF0-4BC7-9F67-52EBA656C798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{274B0A17-6BF0-4BC7-9F67-52EBA656C798}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{540453A4-96A4-47FF-8060-47199981416E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{540453A4-96A4-47FF-8060-47199981416E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{540453A4-96A4-47FF-8060-47199981416E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{540453A4-96A4-47FF-8060-47199981416E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23277659-1E67-4D37-A884-43B164672845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23277659-1E67-4D37-A884-43B164672845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23277659-1E67-4D37-A884-43B164672845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23277659-1E67-4D37-A884-43B164672845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2679AFAC-C23E-411A-815B-C3B7EE6B7731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2679AFAC-C23E-411A-815B-C3B7EE6B7731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2679AFAC-C23E-411A-815B-C3B7EE6B7731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2679AFAC-C23E-411A-815B-C3B7EE6B7731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{527FDC95-B2F3-4306-8530-F6AFBB73688D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{527FDC95-B2F3-4306-8530-F6AFBB73688D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{527FDC95-B2F3-4306-8530-F6AFBB73688D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{527FDC95-B2F3-4306-8530-F6AFBB73688D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31869AD3-A95C-495F-8B2F-4A607A16A17D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31869AD3-A95C-495F-8B2F-4A607A16A17D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31869AD3-A95C-495F-8B2F-4A607A16A17D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31869AD3-A95C-495F-8B2F-4A607A16A17D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE8FADF-C731-481D-838F-0F8A9CE9F74A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE8FADF-C731-481D-838F-0F8A9CE9F74A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE8FADF-C731-481D-838F-0F8A9CE9F74A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE8FADF-C731-481D-838F-0F8A9CE9F74A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{426CB58A-C226-4E46-85AE-1704D307AA69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{426CB58A-C226-4E46-85AE-1704D307AA69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{426CB58A-C226-4E46-85AE-1704D307AA69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{426CB58A-C226-4E46-85AE-1704D307AA69}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{274B0A17-6BF0-4BC7-9F67-52EBA656C798} = {954542E2-4B6A-4F8D-9D96-1115F04F4701}
+		{F9B4BD62-992F-40CB-BEFD-6F8B4D169AFA} = {65A94A21-591F-4583-9093-0CABAA006312}
+		{540453A4-96A4-47FF-8060-47199981416E} = {954542E2-4B6A-4F8D-9D96-1115F04F4701}
+		{23277659-1E67-4D37-A884-43B164672845} = {65A94A21-591F-4583-9093-0CABAA006312}
+		{2679AFAC-C23E-411A-815B-C3B7EE6B7731} = {954542E2-4B6A-4F8D-9D96-1115F04F4701}
+		{527FDC95-B2F3-4306-8530-F6AFBB73688D} = {79820606-E46A-46D8-9279-491A5053F518}
+		{31869AD3-A95C-495F-8B2F-4A607A16A17D} = {79820606-E46A-46D8-9279-491A5053F518}
+		{79820606-E46A-46D8-9279-491A5053F518} = {A9F7E3F7-6F14-4EB9-92C9-FDE0C9625B26}
+		{8FE8FADF-C731-481D-838F-0F8A9CE9F74A} = {79820606-E46A-46D8-9279-491A5053F518}
+		{426CB58A-C226-4E46-85AE-1704D307AA69} = {83E74A27-21D3-404F-A6E9-A855BC6211E2}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://adourish.visualstudio.com/defaultcollection
+		SccProjectUniqueName0 = ReiSys.Hackathon.Vulcan.Core\\ReiSys.Hackathon.Vulcan.Core.csproj
+		SccProjectTopLevelParentUniqueName0 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName0 = ReiSys.Hackathon.Vulcan.Core
+		SccAuxPath0 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath0 = ReiSys.Hackathon.Vulcan.Core
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ReiSys.Hackathon.Vulcan.Infrastructure\\ReiSys.Hackathon.Vulcan.Infrastructure.csproj
+		SccProjectTopLevelParentUniqueName1 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName1 = ReiSys.Hackathon.Vulcan.Infrastructure
+		SccAuxPath1 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath1 = ReiSys.Hackathon.Vulcan.Infrastructure
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ReiSys.Hackathon.Vulcan.Domain\\ReiSys.Hackathon.Vulcan.Domain.csproj
+		SccProjectTopLevelParentUniqueName2 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName2 = ReiSys.Hackathon.Vulcan.Domain
+		SccAuxPath2 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath2 = ReiSys.Hackathon.Vulcan.Domain
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = ReiSys.Hackathon.Vulcan.Data\\ReiSys.Hackathon.Vulcan.Data.csproj
+		SccProjectTopLevelParentUniqueName3 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName3 = ReiSys.Hackathon.Vulcan.Data
+		SccAuxPath3 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath3 = ReiSys.Hackathon.Vulcan.Data
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = ReiSys.Hackathon.Vulcan.Services\\ReiSys.Hackathon.Vulcan.Service.csproj
+		SccProjectTopLevelParentUniqueName4 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName4 = ReiSys.Hackathon.Vulcan.Services
+		SccAuxPath4 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath4 = ReiSys.Hackathon.Vulcan.Services
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = ReiSys.Hackathon.Vulcan.Web\\ReiSys.Hackathon.Vulcan.Web.csproj
+		SccProjectTopLevelParentUniqueName5 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName5 = ReiSys.Hackathon.Vulcan.Web
+		SccAuxPath5 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath5 = ReiSys.Hackathon.Vulcan.Web
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = ReiSys.Hackathon.Vulcan.TypeScript\\ReiSys.Hackathon.Vulcan.TypeScript.csproj
+		SccProjectTopLevelParentUniqueName6 = ReiSys.Hackathon.Vulcan.sln
+		SccProjectName6 = ReiSys.Hackathon.Vulcan.TypeScript
+		SccAuxPath6 = https://adourish.visualstudio.com/defaultcollection
+		SccLocalPath6 = ReiSys.Hackathon.Vulcan.TypeScript
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

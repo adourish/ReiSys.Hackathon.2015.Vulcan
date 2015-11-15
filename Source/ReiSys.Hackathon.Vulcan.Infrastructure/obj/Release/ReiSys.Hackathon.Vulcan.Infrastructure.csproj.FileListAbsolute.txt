@@ -1,0 +1,7 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Release\Candidate.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Release\Candidate.Infrastructure.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Release\Newtonsoft.Json.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Release\Newtonsoft.Json.xml
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Release\ReiSys.Hackathon.Vulcan.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Release\Candidate.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Release\Candidate.Infrastructure.pdb

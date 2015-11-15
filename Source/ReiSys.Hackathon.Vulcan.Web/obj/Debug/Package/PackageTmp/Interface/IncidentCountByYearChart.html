@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+    body {
+        font: 10px sans-serif;
+    }
+
+    .axis path,
+    .axis line {
+        fill: none;
+        stroke: #000;
+        shape-rendering: crispEdges;
+    }
+
+    .x.axis path {
+        display: none;
+    }
+
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+</style>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script src="//d3js.org/d3.v3.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../Include/Javascript/ReiSys-Hackathon-Vulcan.js"></script>
+    <script>
+
+var margin = {top: 20, right: 80, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var parseDate = d3.time.format("%Y%m%d").parse;
+
+var x = d3.time.scale()
+    .range([0, width]);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.disasterCount); });
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+var getUrl = window.location;
+var baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+baseUrl = this.baseUrl.replace('/interface', '');
+var apiURI = this.baseUrl + '/api/vulcan/GetIncidentCountByYear'
+
+
+d3.json(apiURI, function (error, data) {
+  if (error) throw error;
+    var columnNames = data.Results.output1.value.ColumnNames;
+    var valuesOfColumns = data.Results.output1.value.Values.sort();
+
+    var disasterArray = new Array();
+
+    for(var i=2; i<=23; i++)
+    {        
+        disasterArray.push({ "date": valuesOfColumns[i][0] + "0101", "Hurricane": valuesOfColumns[i][3], "Severe Storm(s)": valuesOfColumns[i][15], "Fire": valuesOfColumns[i][18], "Flood": valuesOfColumns[i][7], "Severe Ice Storm": valuesOfColumns[i][16], "Snow": valuesOfColumns[i][17] });        
+    }
+
+    data = disasterArray;
+
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+
+  data.forEach(function(d) {
+    d.date = parseDate(d.date);
+          });
+
+
+  var cities = color.domain().map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+        return {date: d.date, disasterCount: +d[name]};
+      })
+    };
+  });
+
+  x.domain(d3.extent(data, function(d) { return d.date; }));
+
+  y.domain([
+    d3.min(cities, function(c) { return d3.min(c.values, function(v) { return v.disasterCount; }); }),
+    d3.max(cities, function(c) { return d3.max(c.values, function(v) { return v.disasterCount; }); })
+  ]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+    .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")      
+      .text("Count of Disasters");
+
+  var disasterType = svg.selectAll(".disasterType")
+      .data(cities)
+    .enter().append("g")
+      .attr("class", "disasterType");
+
+  disasterType.append("path")
+      .attr("class", "line")
+      .attr("d", function(d) { return line(d.values); })
+      .style("stroke", function(d) { return color(d.name); });
+
+  disasterType.append("text")
+      .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
+      .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.disasterCount) + ")"; })
+      .attr("x", 3)
+      .attr("dy", ".35em")      
+      .text(function(d) { return d.name; });
+});
+
+    </script>
+
+    <div style="margin-left:40px">
+        Hurricane
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(31, 119, 180);stroke-width:3;stroke:rgb(31, 119, 180)" />
+        </svg>
+        &nbsp;&nbsp;
+        Severe Storm
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(255, 127, 14);stroke-width:3;stroke:rgb(255, 127, 14)" />
+        </svg>
+        &nbsp;&nbsp;
+        Fire
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(44, 160, 44);stroke-width:3;stroke:rgb(44, 160, 44)" />
+        </svg>
+        &nbsp;&nbsp;
+        Flood
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(214, 39, 40);stroke-width:3;stroke:rgb(214, 39, 40)" />
+        </svg>
+        &nbsp;&nbsp;
+        Severe Ice Storm
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(148, 103, 189);stroke-width:3;stroke:rgb(148, 103, 189)" />
+        </svg>
+        &nbsp;&nbsp;
+        Snow
+        <svg width="25px" height="10px">
+            <rect width="25px" height="10px" style="fill:rgb(140, 86, 75);stroke-width:3;stroke:rgb(140, 86, 75)" />
+        </svg>
+
+
+    </div>
+
+
+
+</body>
+</html>

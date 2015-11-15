@@ -1,0 +1,9 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\bin\Debug\ReiSys.Hackathon.Vulcan.Core.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\bin\Debug\ReiSys.Hackathon.Vulcan.Core.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\obj\Debug\ReiSys.Hackathon.Vulcan.Core.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\obj\Debug\ReiSys.Hackathon.Vulcan.Core.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Core\bin\Debug\ReiSys.Hackathon.Vulcan.Core.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Core\bin\Debug\ReiSys.Hackathon.Vulcan.Core.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Core\obj\Debug\ReiSys.Hackathon.Vulcan.Core.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Core\obj\Debug\ReiSys.Hackathon.Vulcan.Core.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Core\obj\Debug\ReiSys.Hackathon.Vulcan.Core.csprojResolveAssemblyReference.cache

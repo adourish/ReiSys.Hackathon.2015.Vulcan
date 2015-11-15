@@ -1,0 +1,5 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\bin\Release\Core.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\bin\Release\Core.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\obj\Release\ReiSys.Hackathon.Vulcan.Core.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\obj\Release\Core.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Core\obj\Release\Core.pdb

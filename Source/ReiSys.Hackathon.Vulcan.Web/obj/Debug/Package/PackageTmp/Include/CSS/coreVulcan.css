@@ -1,0 +1,115 @@
+/* background colors */
+body {
+  overflow-x: hidden;
+}
+.navbar {
+  min-height: 95px;
+}
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:focus {
+  color: #ffffff;
+  background-color: transparent;
+  font-size: 1.4em;
+}
+.navbar-header {
+  padding-bottom: 20px;
+}
+.navbar-header .navbar-toggle {
+  margin-top: 30px;
+}
+.navbar-header .navbar-brand .hackathon-logo-top {
+  background-image: url(../Images/Hackathon_Logo.jpg);
+  height: 68px;
+  width: 125px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-size: auto 100%;
+  top: -3px;
+  margin-top: -3px;
+}
+@media (min-width: 768px) {
+  .navbar-nav {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+}
+@media (max-width: 767px) {
+  .navbar-nav > li > a:hover,
+  .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: transparent;
+    font-size: 1.3em;
+  }
+}
+.dashboardTitle {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+.tile {
+  height: 200px;
+  width: 98%;
+  margin-bottom: 15px;
+  color: #ffffff !important;
+  border: 1px solid;
+}
+.tile a {
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-radius: 0px 0px;
+  color: #ffffff;
+}
+.tile .tile-title {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.tile .tile-title .tile-title-icon {
+  padding-left: 50px;
+}
+.tile .tile-title .tile-title-text {
+  padding-top: 8px;
+  text-align: left;
+  font-size: 2em;
+  font-weight: bold;
+}
+.tile .tile-information {
+  border-top: 1px solid #ffffff;
+  margin-left: 12px;
+  margin-right: 12px;
+  padding: 10px 10px 10px 10px;
+}
+.tile:hover {
+  border: 2px solid;
+  outline-offset: 0.05em;
+  outline-style: solid;
+  outline-width: medium;
+}
+.tile-teal {
+  background-color: #00aba9;
+  border-color: #007877;
+}
+.tile-teal:hover {
+  border-color: #007877;
+  outline-color: #007877;
+}
+.tile-emerald {
+  background-color: #008a00;
+  border-color: #005700;
+}
+.tile-emerald:hover {
+  border-color: #005700;
+  outline-color: #005700;
+}
+.tile-orange {
+  background-color: #fa6800;
+  border-color: #c75300;
+}
+.tile-orange:hover {
+  border-color: #c75300;
+  outline-color: #c75300;
+}

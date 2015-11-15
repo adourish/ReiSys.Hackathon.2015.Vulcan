@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Darker than black</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://mydevbox.reisys.com/candidate/include/css/default.css" media="screen" />
+    <style type="text/css">
+        img {
+            max-width: 85%;
+            height: auto;
+        }
+
+        h1 {
+            page-break-before: always;
+        }
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            AddImages()
+
+        });
+
+        function Page(index, id, url, filename) {
+            this.Index = index;
+            this.FileName = filename;
+            this.Id = id;
+            this.Url = url;
+            
+        }
+
+        function Section(chapter, start, end) {
+            this.Chapter = chapter;
+            this.Start = start;
+            this.End = end;
+        }
+
+        var pages = [];
+        function AddImages() {
+            var index = 1; var section;
+
+            //section = new Section(1, 296261, 296308);
+            //section = new Section(2, 296309, 296356);
+            //section = new Section(3, 296357, 296397);
+            //section = new Section(4, 296398, 296443);
+            //section = new Section(5, 296444, 296478);
+            //section = new Section(6, 296479, 296511);
+            //section = new Section(7, 296512, 296544);
+            //section = new Section(8, 296545, 296585);
+            section = new Section(9, 296586, 296635);
+            document.title = "Darker than Black Chapter " + section.Chapter;
+
+            for (i = section.Start; i <= section.End; i++) {
+                var p = new Page(index, i, "http://i16.mangareader.net/darker-than-black/" + section.Chapter + "/darker-than-black-" + i + ".jpg", "darkerthanblack_" + index + ".jpg");
+                var test = '';
+                //var p = new Page(index, i, "http://i38.mangareader.net/darker-than-black-shikkoku-no-hana/1/darker-than-black-shikkoku-no-hana-" + i + ".jpg", "darkerthanblackshikkokunohana_" + i + ".jpg");
+                pages.push(p)
+                $('#divOutput').append('<a href="' + p.Url + '" title="' + p.FileName + '" download="' + p.FileName + '" >');
+                $('#divOutput').append('<img id="' + p.Id + '" src="' + p.Url + '" />');
+                $('#divOutput').append('</a>');
+                $('#divOutput').append('<br/>Page: ' + i + '<br/>');
+                $('#divOutput').append('<h1>');
+                // test
+
+                index++;
+            }
+
+
+        }
+
+    </script>
+
+</head>
+<body>
+    <div id="divOutput"></div>
+</body>
+</html>

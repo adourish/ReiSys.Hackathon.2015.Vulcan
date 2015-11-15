@@ -1,0 +1,16 @@
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\ReiSys.Hackathon.Vulcan.TypeScript.dll.config
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\ReiSys.Hackathon.Vulcan.TypeScript.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\ReiSys.Hackathon.Vulcan.TypeScript.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\obj\Debug\ReiSys.Hackathon.Vulcan.TypeScript.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\obj\Debug\ReiSys.Hackathon.Vulcan.TypeScript.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.ServiceLocation.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.Configuration.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.RegistrationByConvention.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.ServiceLocation.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.ServiceLocation.xml
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.xml
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.Configuration.xml
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Microsoft.Practices.Unity.RegistrationByConvention.xml
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\bin\Model\StatePostitionModel.ts
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.TypeScript\obj\Debug\ReiSys.Hackathon.Vulcan.TypeScript.csprojResolveAssemblyReference.cache

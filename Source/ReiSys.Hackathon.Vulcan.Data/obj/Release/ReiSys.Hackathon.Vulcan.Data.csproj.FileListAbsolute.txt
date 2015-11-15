@@ -1,0 +1,7 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Release\Candidate.Data.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Release\Candidate.Data.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Release\Candidate.Domain.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Release\Candidate.Domain.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Release\ReiSys.Hackathon.Vulcan.Data.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Release\Candidate.Data.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Release\Candidate.Data.pdb

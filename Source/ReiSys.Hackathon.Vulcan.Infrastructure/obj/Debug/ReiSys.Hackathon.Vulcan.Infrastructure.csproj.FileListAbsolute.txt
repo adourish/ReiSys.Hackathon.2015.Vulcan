@@ -1,0 +1,14 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Infrastructure\obj\Debug\ReiSys.Hackathon.Vulcan.Infrastructure.csprojResolveAssemblyReference.cache

@@ -1,0 +1,14 @@
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Data.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Data.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Domain.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Domain.pdb
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.dll
+C:\Workspace\ReiSys.Hackathon.Vulcan-Dev\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Data.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Data.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Domain.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\bin\Debug\ReiSys.Hackathon.Vulcan.Domain.pdb
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.csprojResolveAssemblyReference.cache
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.dll
+C:\Workspace\ReiSys.Hackathon.2015.Vulcan\Source\ReiSys.Hackathon.Vulcan.Data\obj\Debug\ReiSys.Hackathon.Vulcan.Data.pdb

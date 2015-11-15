@@ -1,0 +1,142 @@
+﻿
+@import (less) "coreVariables.less";
+
+body {
+    overflow-x: hidden;
+}
+
+// Main Navigation Classes
+
+.navbar {
+    min-height: 95px;
+
+    .navbar-nav > .active > a, .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: transparent;
+        font-size: 1.4em;
+    }
+}
+
+.navbar-header {
+    padding-bottom: 20px;
+
+    .navbar-toggle {
+        margin-top: 30px;
+    }
+
+    .navbar-brand {
+        .hackathon-logo-top {
+            background-image: url(../Images/Hackathon_Logo.jpg);
+            height: 68px;
+            width: 125px;
+            background-position: 0px 0px;
+            background-repeat: no-repeat;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-size: auto 100%;
+            top: -3px;
+            margin-top: -3px;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        margin-top: 20px;
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > li > a:hover, .navbar-nav > .active > a:focus {
+        color: #ffffff;
+        background-color: transparent;
+        font-size: 1.3em;
+    }
+}
+
+
+// Dashboard Title
+.dashboardTitle {
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.tile {
+    height: 200px;
+    width: 98%;
+    margin-bottom: 15px;
+    color: @bg-white !important;
+    border: 1px solid;
+
+    a {
+        height: 100%;
+        width: 100%;
+        background-color: transparent;
+        border: none;
+        border-radius: 0px 0px;
+        color: @bg-white;
+    }
+
+    .tile-title {
+        margin-top: 30px;
+        margin-bottom: 40px;
+
+        .tile-title-icon {
+            padding-left: 50px;
+        }
+
+        .tile-title-text {
+            padding-top: 8px;
+            text-align: left;
+            font-size: 2em;
+            font-weight: bold;
+        }
+    }
+
+    .tile-information {
+        border-top: 1px solid @bg-white;
+        margin-left: 12px;
+        margin-right: 12px;
+        padding: 10px 10px 10px 10px;
+    }
+
+    &:hover {
+        border: 2px solid;
+        outline-offset: 0.05em;
+        outline-style: solid;
+        outline-width: medium;
+    }
+}
+
+.tile-teal {
+    background-color: @bg-teal;
+    border-color: darken(@bg-teal, 10%);
+
+    &:hover {
+        border-color: darken(@bg-teal, 10%);
+        outline-color: darken(@bg-teal, 10%);
+    }
+}
+
+.tile-emerald {
+    background-color: @bg-emerald;
+    border-color: darken(@bg-emerald, 10%);
+
+    &:hover {
+        border-color: darken(@bg-emerald, 10%);
+        outline-color: darken(@bg-emerald, 10%);
+    }
+}
+
+.tile-orange {
+    background-color: @bg-orange;
+    border-color: darken(@bg-orange, 10%);
+
+    &:hover {
+        border-color: darken(@bg-orange, 10%);
+        outline-color: darken(@bg-orange, 10%);
+    }
+}
