@@ -16,10 +16,11 @@
     <script>
         var vulcanController;
         var contextModel;
+        var sumCountDisaster;
         $(document).ready(function () {
             vulcanController = new ReiSysHackathon.Vulcan.Controller.VulcanController();
             contextModel = vulcanController.GetContext();
-
+            sumCountDisaster = vulcanController.GetDisasterSumAndCountData();
         });
     </script>
 </head>

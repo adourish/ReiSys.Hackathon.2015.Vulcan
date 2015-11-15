@@ -60,6 +60,16 @@ namespace ReiSys.Hackathon.Vulcan.Core.Constants
         /// </summary>
         public static string AssistanceSummaryByYearRequestURI = "https://ussouthcentral.services.azureml.net/workspaces/80856e981b3d436781e8999f03c2b04b/services/14f088c761ef4ba091b40a1e0992e2e7/execute?api-version=2.0&details=true";
 
+        /// <summary>
+        /// API key for PredictionByIncidentType
+        /// </summary>
+        public static string PredictionByIncidentTypeAPIKey = "z2wUs9KreG2Nb4gS4fOaqQoAq5+PmJ1837ma67W41VkSdse7Mh7V+x0VmfZpxiY6Q+P7x3YZUb+DTPfmMxl/Sw==";
+
+        /// <summary>
+        /// Request URI for PredictionByIncidentType
+        /// </summary>
+        public static string PredictionByIncidentTypeRequestURI = "https://ussouthcentral.services.azureml.net/workspaces/80856e981b3d436781e8999f03c2b04b/services/2bf8ac778d6b46c6aef61feb32269047/execute?api-version=2.0&details=true";
+
         public static string DisasterCountAndSumByStateDataAPIKey = "dpFA6WqoTMOnOhDJkaJJ1LLTGDstv4IUpveat71+AsUsCp/xBCBjV2MX4A2ZW2UgKH6GendmCqzfHUPCTWlaZw==";
         public static string DisasterCountAndSumByStateDataRequestURI = "https://ussouthcentral.services.azureml.net/workspaces/80856e981b3d436781e8999f03c2b04b/services/fecfdaff2fff48ef8456cf652eab059d/execute?api-version=2.0&details=true";
 

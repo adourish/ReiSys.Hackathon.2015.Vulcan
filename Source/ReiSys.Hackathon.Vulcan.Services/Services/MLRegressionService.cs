@@ -194,5 +194,41 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
             return result;
         }
 
+
+        /// <summary>
+        /// Get Prediction by Incident Type
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="county"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
+        public string GetPredictionByIncidentType(string state, string county, string year)
+        {
+            var scoreRequest = new
+            {
+
+                Inputs = new Dictionary<string, StringTable>() {
+                        {
+                            "input1",
+                            new StringTable()
+                            {
+                                ColumnNames = new string[] {"State", "County", "Disaster Number", "Declaration Date"},
+                                Values = new string[,] { { state, county, "1239", "01/01/"+year }  }
+                            }
+                        },
+                },
+                GlobalParameters = new Dictionary<string, string>()
+                {
+                }
+            };
+
+
+            var result = mlAPIClientService.GetClientData(scoreRequest,
+                MLConstants.PredictionByIncidentTypeRequestURI,
+                MLConstants.PredictionByIncidentTypeAPIKey);
+
+            return result;
+        }
+
     }
 }

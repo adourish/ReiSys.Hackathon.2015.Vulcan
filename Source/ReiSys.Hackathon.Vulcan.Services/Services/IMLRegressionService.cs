@@ -22,6 +22,8 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
 
         string AssistanceSummaryByYear();
 
+        string GetPredictionByIncidentType(string state, string county, string year);
+
         string GetDisasterCountAndSumByState();
     }
 }
