@@ -185,6 +185,7 @@
     <Content Include="Include\Images\Nishit.bmp" />
     <Content Include="Include\Images\predictive.png" />
     <Content Include="Include\Images\Thomas.bmp" />
+    <Content Include="Include\Images\Vulcans.jpg" />
     <Content Include="Include\Images\Yogesh.bmp" />
     <Content Include="Include\Javascript\ReiSys-Hackathon-Vulcan.js" />
     <Content Include="Include\Javascript\States.js" />
