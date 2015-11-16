@@ -33,6 +33,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         url: '/code',
         templateUrl: 'environment.html'
     })
+        .state('technology', {
+        url: '/technology',
+        templateUrl: 'Technology.html'
+    })
         .state('machinelearning', {
         url: '/machinelearning',
         templateUrl: 'machinelearning.html'
@@ -333,16 +337,16 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
-            var DisasterPredictionModel = (function () {
+            var DisasterTypePredictionModel = (function () {
                 /* Holds the Disaster Prediction Model  */
-                function DisasterPredictionModel(DisasterType, StartDate, EndDate) {
-                    this.DisasterType = DisasterType;
-                    this.StartDate = StartDate;
-                    this.EndDate = EndDate;
+                function DisasterTypePredictionModel(State, County, Year) {
+                    this.State = State;
+                    this.County = County;
+                    this.Year = Year;
                 }
-                return DisasterPredictionModel;
+                return DisasterTypePredictionModel;
             })();
-            Model.DisasterPredictionModel = DisasterPredictionModel;
+            Model.DisasterTypePredictionModel = DisasterTypePredictionModel;
         })(Model = Vulcan.Model || (Vulcan.Model = {}));
     })(Vulcan = ReiSysHackathon.Vulcan || (ReiSysHackathon.Vulcan = {}));
 })(ReiSysHackathon || (ReiSysHackathon = {}));
@@ -373,16 +377,16 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
-            var DisasterTypePredictionModel = (function () {
+            var DisasterPredictionModel = (function () {
                 /* Holds the Disaster Prediction Model  */
-                function DisasterTypePredictionModel(State, County, Year) {
-                    this.State = State;
-                    this.County = County;
-                    this.Year = Year;
+                function DisasterPredictionModel(DisasterType, StartDate, EndDate) {
+                    this.DisasterType = DisasterType;
+                    this.StartDate = StartDate;
+                    this.EndDate = EndDate;
                 }
-                return DisasterTypePredictionModel;
+                return DisasterPredictionModel;
             })();
-            Model.DisasterTypePredictionModel = DisasterTypePredictionModel;
+            Model.DisasterPredictionModel = DisasterPredictionModel;
         })(Model = Vulcan.Model || (Vulcan.Model = {}));
     })(Vulcan = ReiSysHackathon.Vulcan || (ReiSysHackathon.Vulcan = {}));
 })(ReiSysHackathon || (ReiSysHackathon = {}));
