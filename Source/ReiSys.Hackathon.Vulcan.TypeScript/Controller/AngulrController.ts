@@ -43,6 +43,11 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         .state('code', {
             url: '/code',
             templateUrl: 'environment.html'
+        })
+
+        .state('machinelearning', {
+            url: '/machinelearning',
+            templateUrl: 'machinelearning.html'
         });
 
    

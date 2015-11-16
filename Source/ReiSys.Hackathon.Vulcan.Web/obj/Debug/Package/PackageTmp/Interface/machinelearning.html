@@ -1,0 +1,84 @@
+﻿Machine Learning:
+
+
+Dataset: FEMA Disaster Declarations Summary - Open Government Dataset
+
+<div class="panel panel-default">
+    <div class="panel-heading">Environment</div>
+    <div class="panel-body">
+        <img src="../include/images/predictive.png" alt="Environment" class="img-responsive" />
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Environment</div>
+    <div class="panel-body">
+        <img src="../include/images/learn.png" alt="Environment" class="img-responsive" />
+    </div>
+</div>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Environment</div>
+    <div class="panel-body">
+        <img src="../include/images/incident.png" alt="Environment" class="img-responsive" />
+    </div>
+</div>
+
+
+
+Dataset: FEMA Public Assistance Funded Projects Summary - Open Government Initiative
+
+
+Predicting the State where the disaster could happen:
+Data Pre-Processing:
+Irrelevant columns which are not mutually co-related to the attribute which has to be predicted i.e State in this case are removed from the dataset. The metadata was modified to make meaningful sense of the labels of the columns.
+Feature Based Selection:
+Mutual Information Feature Based Selection is used to get the best attributes from the dataset which give a high metric of mutual co-relation with the attribute we want to predict.
+Splitting of data:
+•	The dataset is split into 65/35 Training to Test Dataset.
+
+Training Experiment:
+Machine Learning Algorithms:
+Since the attribute to be predicted has 50 states ie multiple classes, the algorithms which qualify are multiclass prediction algorithms.
+For predicting the Incident Type: Multiclass Algorithms were used to create models and to predict the Federal Share Obligated Regression algorithms were used since the currency in this case was a numeric feature.
+Many machine learning algorithms were used to train on the dataset after pre-processing the dataset.
+
+Models were created for each of the algorithm used and all the models were evaluated.
+Best model amongst all was chosen based on the accuracy.
+Best algorithms selected:
+•	Predict State of Disaster: Multiclass Decision Forest | Accuracy: 36%
+•	Predict Incident Type: Multiclass Decision Forest | Accuracy: 69%
+•	Predict Federal Obligated Share: Fast Forest Quantile Regression | Accuracy: 45%
+
+After choosing the best model, a web-service is set-up and then deployed for the applications to interact with the service.
+Once the inputs are provided from the application the prediction will be made by running the trained model on the input.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Published Experiments:
+•	Predict Federal Share Obligated for a given disaster:
+http://gallery.azureml.net/Details/4f8259a718a14d70a2da73e9a4ca92c8
+•	Predict Incident Type for a given disaster:
+http://gallery.azureml.net/Details/46f049d8c9a648cfaf6b452f6385a900
+
+
+
+

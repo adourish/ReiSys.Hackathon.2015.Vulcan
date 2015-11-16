@@ -1,14 +1,13 @@
 ﻿
 
-<div class="row">
-    <div class="col-xs-12">
-        <div class="dashboardTitle">
-            <h1>Disaster Prediction</h1>
+<form id="formDisasterPrediction" class="form-horizontal" role="form">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="dashboardTitle">
+                <h1>Disaster Prediction by State</h1>
+            </div>
         </div>
     </div>
-</div>
-
-<form id="formDisasterPrediction" class="form-horizontal" role="form">
     <div class="form-group">
         <label class="control-label col-sm-4" for="txtDisasterType">Disaster Type:</label>
         <div class="col-sm-6">
@@ -30,14 +29,58 @@
     <div class="form-group">
         <div class="col-sm-offset-4 col-sm-6">
             <input type="button" value="Predict" id="btnPredict" class="btn btn-default" onclick="vulcanController.GetDisasterPrediction()" />
-            <div id="divOutput" style="font-size:medium;" ></div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8  col-md-offset-4 col-md-8 formCenter">
+            <div class="panel panel-default">
+                <div class="panel-heading">Prediction Result</div>
+                <div class="panel-body">
+                    <div id="divOutput" class="predictionOutput"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="dashboardTitle">
+                <h1>Disaster Prediction by Type</h1>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4" for="txtState">State:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="txtState" placeholder="Enter State" value="Virginia" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4" for="txtCounty">County:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="txtCounty" placeholder="Enter County" value="Fairfax" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-4" for="txtYear">Year:</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" id="txtYear" placeholder="Enter Year" value="2016" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-4 col-sm-6">
+            <input type="button" value="Predict" id="btnPredictType" class="btn btn-default" onclick="vulcanController.GetDisasterPrediction()" />
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-xs-12 col-sm-offset-2 col-sm-8  col-md-offset-4 col-md-8 formCenter">
+            <div class="panel panel-default">
+                <div class="panel-heading">Prediction Result</div>
+                <div class="panel-body">
+                    <div id="divOutputByType" class="predictionOutput"></div>
+                </div>
+            </div>
         </div>
     </div>
 </form>
-
-<div class="row">
-    <div class="col-xs-12">
-        
-    </div>
-</div>
 

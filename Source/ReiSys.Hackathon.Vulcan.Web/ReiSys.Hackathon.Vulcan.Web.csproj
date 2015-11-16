@@ -180,7 +180,10 @@
     <Content Include="Include\Images\image010.png" />
     <Content Include="Include\Images\image011.png" />
     <Content Include="Include\Images\image012.png" />
+    <Content Include="Include\Images\incident.png" />
+    <Content Include="Include\Images\learn.png" />
     <Content Include="Include\Images\Nishit.bmp" />
+    <Content Include="Include\Images\predictive.png" />
     <Content Include="Include\Images\Thomas.bmp" />
     <Content Include="Include\Images\Yogesh.bmp" />
     <Content Include="Include\Javascript\ReiSys-Hackathon-Vulcan.js" />
@@ -196,6 +199,7 @@
     <Content Include="Interface\Layout\Common\Footer.html" />
     <Content Include="Interface\Layout\Common\Header.html" />
     <Content Include="Interface\Layout\Common\Menu.html" />
+    <Content Include="Interface\machinelearning.html" />
     <Content Include="Interface\Technology.html" />
     <Content Include="Interface\Past.html" />
     <Content Include="packages.config">

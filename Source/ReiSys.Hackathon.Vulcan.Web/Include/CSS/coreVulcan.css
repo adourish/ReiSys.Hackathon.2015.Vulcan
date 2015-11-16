@@ -87,6 +87,11 @@ body {
   margin-left: 12px;
   margin-right: 12px;
   padding: 10px 10px 10px 10px;
+  font-size: 1.3em;
+  padding-right: 35px;
+}
+.tile .tile-information .note {
+  font-size: 0.65em;
 }
 .tile:hover {
   border: 2px solid;
@@ -147,4 +152,7 @@ body {
   -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
+}
+.teamLogoText {
+  font-size: 0.9em;
 }
