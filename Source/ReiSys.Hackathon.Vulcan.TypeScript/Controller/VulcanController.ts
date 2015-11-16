@@ -5,14 +5,17 @@
             this.vulcanService = new ReiSysHackathon.Vulcan.Service.VulcanService();
         }
 
+        /* Gets the */
         GetContext(): any {
             return this.vulcanService.GetContext();
         }
 
+        /* Get the count by incident type */
         GetCountByIncidentType() {
             return this.vulcanService.GetCountByIncidentType();
         }
 
+        /* Gets the summary counts*/
         GetDisasterSumAndCountData() {
             var sumAndCount = this.vulcanService.GetDisasterSumAndCountData();
             var output = JSON.stringify(sumAndCount.Results.output1);
@@ -23,18 +26,22 @@
             $('#divSumOfMoneySpent2015').html(o1[2]); //2
         }
 
+        /* Gets the counts of incidents by year*/
         GetIncidentCountByYear() {
             return this.vulcanService.GetIncidentCountByYear();
         }
 
+        /* Gets the assistance summary (grant amount) by year*/
         AssistanceSummaryByYear() {
             return this.vulcanService.AssistanceSummaryByYear();
         }
 
+        /* Gets Disaster information (count an dcost) by state for a given year and type of disaster*/
         GetDisasterCountAndSumByState() {
             return this.vulcanService.GetDisasterCountAndSumByState();
         }
 
+        /* Gets the disaster prediction results */
         GetDisasterPrediction() {
             var dpm = new ReiSysHackathon.Vulcan.Model.DisasterPredictionModel($('#txtDisasterType').val(), $('#txtStartDate').val(), $('#txtEndDate').val());
             var result = this.vulcanService.GetDisasterPrediction(dpm);

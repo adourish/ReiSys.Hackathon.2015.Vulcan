@@ -1,12 +1,7 @@
-﻿using ReiSys.Hackathon.Vulcan.Core.Constants;
-using ReiSys.Hackathon.Vulcan.Services.Data;
-using ReiSys.Hackathon.Vulcan.Services.Services;
+﻿using ReiSys.Hackathon.Vulcan.Services.Services;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ReiSys.Hackathon.Vulcan.Services.Factory

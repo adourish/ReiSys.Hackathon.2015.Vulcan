@@ -4,7 +4,7 @@
         constructor() {
             var getUrl = window.location;
             this.baseUrl = getUrl.protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
-            this.baseUrl = this.baseUrl.replace('/interface','');
+            this.baseUrl = this.baseUrl.replace('/interface', '');
         }
 
         // get context.
@@ -20,7 +20,7 @@
                 success: function (data) { result = data; },
                 jsonpCallback: 'itDoesntMatterNotAFunction',
             };
-       
+
             $.ajax(settings);
 
             return result;
@@ -83,6 +83,7 @@
             return result;
         }
 
+        //gets teh assiments sumamry by year
         AssistanceSummaryByYear() {
             var result = undefined;
             var settings: JQueryAjaxSettings = {
@@ -101,6 +102,7 @@
             return result;
         }
 
+        // Gets teh count and cost and disaster count for a state for a year
         GetDisasterCountAndSumByState() {
             var result = undefined;
             var settings: JQueryAjaxSettings = {
@@ -134,10 +136,8 @@
             };
 
             $.ajax(settings);
-            
+
             return result;
         }
-        
-           
     }
 }

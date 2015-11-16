@@ -21,6 +21,9 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
     /// </summary>
     public class MLRegressionService : IMLRegressionService
     {
+        /// <summary>
+        /// A readonly version fo the client service
+        /// </summary>
         private readonly IMLAPIClientService mlAPIClientService;
         /// <summary>
         /// init
@@ -36,7 +39,6 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
         /// <returns></returns>
         public string DMLMPredictiveExperiment()
         {
-
             var scoreRequest = new
             {
                 inputs = new Dictionary<string, StringTable>() {
@@ -52,15 +54,9 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
                 {
                 }
             };
-
             var result = mlAPIClientService.GetClientData(scoreRequest, MLConstants.DMLMPBaseAddress, MLConstants.APIKey);
-
             return result;
         }
-
-
-
-
 
         /// <summary>
         /// disaster sum
@@ -96,7 +92,6 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
             var result = mlAPIClientService.GetClientData(scoreRequest,
                 MLConstants.DisasterCountAndSumByStateDataRequestURI,
                 MLConstants.DisasterCountAndSumByStateDataAPIKey);
-
             return result;
         }
 
@@ -134,8 +129,6 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
             var result = mlAPIClientService.GetClientData(scoreRequest,
                 MLConstants.IncidentCountByYearRequestURI,
                 MLConstants.IncidentCountByYearAPIKey);
-
-            //string result = "{ \"date\": \"20150101\", \"Hurricane\": \"1000\", \"Severe Storm\": \"1500\", \"Earthquake\": \"500\" },{ \"date\": \"20140101\", \"Hurricane\": \"500\", \"Severe Storm\": \"800\", \"Earthquake\": \"1500\" },{ \"date\": \"20130101\", \"Hurricane\": \"1500\", \"Severe Storm\": \"500\", \"Earthquake\": \"1000\" }";
             return result;
         }
 
@@ -165,8 +158,6 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
                 {
                 }
             };
-
-
             var result = mlAPIClientService.GetClientData(scoreRequest,
                 MLConstants.DisasterManagementPredictionRequestURI,
                 MLConstants.DisasterManagementPredictionAPIKey);
@@ -193,7 +184,6 @@ namespace ReiSys.Hackathon.Vulcan.Service.Services
 
             return result;
         }
-
 
         /// <summary>
         /// Get Prediction by Incident Type

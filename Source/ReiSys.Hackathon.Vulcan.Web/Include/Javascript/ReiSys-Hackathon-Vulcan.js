@@ -78,7 +78,6 @@ var ReiSysHackathon;
                     for (var i = 0; i < disasterTypeCount; i++) {
                         var current = this.disasterColorCollection.disasterColorModelItems[i];
                         if (current.id === disasterType) {
-                            console.log(disasterType);
                             minColor = current.minColor;
                             maxColor = current.maxColor;
                         }
@@ -91,15 +90,16 @@ var ReiSysHackathon;
                     });
                     this.usStatesController.render(data, minColor, maxColor, maxValue);
                 };
-                DisasterStateController.prototype.createCleanDataSet = function (serverData) {
+                /* creates the local data object */
+                DisasterStateController.prototype.createLocalDataObject = function (serverData) {
                     this.storedSet = new Array();
                     var disasterCount = serverData.length;
                     for (var i = 0; i < disasterCount; i++) {
                         var currentItemInSet = serverData[i];
                         this.storedSet.push(new ReiSysHackathon.Vulcan.Model.DisasterStateMetricsModel(currentItemInSet[0], currentItemInSet[1], currentItemInSet[2], currentItemInSet[3], currentItemInSet[4]));
                     }
-                    console.log('Thomas Look here');
                 };
+                /* returns the collection of states and the cost for a disaster type for a given year */
                 DisasterStateController.prototype.getCost = function (disasterType, year) {
                     var storedSetCount = this.storedSet.length;
                     var data = new Array();
@@ -111,6 +111,7 @@ var ReiSysHackathon;
                     }
                     return data;
                 };
+                /* returns the collection of states and the number of incidents for a disaster type for a given year */
                 DisasterStateController.prototype.getIncidentCount = function (disasterType, year) {
                     var storedSetCount = this.storedSet.length;
                     var data = new Array();
@@ -122,14 +123,14 @@ var ReiSysHackathon;
                     }
                     return data;
                 };
+                /*gets the data to be rendered  */
                 DisasterStateController.prototype.getData = function (disasterType, year, dimension) {
                     if (this.storedSet === null || this.storedSet === undefined) {
                         var serverResultSet = this.vulcanController.GetDisasterCountAndSumByState();
                         var serverData = serverResultSet.Results.output1.value.Values;
-                        this.createCleanDataSet(serverData);
+                        this.createLocalDataObject(serverData);
                     }
                     var data = new Array();
-                    console.log(dimension);
                     if (dimension === 'Count') {
                         data = this.getIncidentCount(disasterType, year);
                     }
@@ -140,6 +141,7 @@ var ReiSysHackathon;
                     }
                     return data;
                 };
+                /* sets up the drop down for the years */
                 DisasterStateController.prototype.setUpSelection = function () {
                     var selectCtrl = $('#yearStateDD');
                     var startDate = 2015;
@@ -150,12 +152,15 @@ var ReiSysHackathon;
                             .text(i));
                     }
                 };
+                /* change event call for the disaster type drop down */
                 DisasterStateController.prototype.disasterTypeDropdownChange = function (value) {
                     this.dataChanged();
                 };
+                /* change event call for the year drop down */
                 DisasterStateController.prototype.yearDropdownChange = function (value) {
                     this.dataChanged();
                 };
+                /* change event call for the dimension drop down */
                 DisasterStateController.prototype.dimensionDropdownChange = function (value) {
                     this.dataChanged();
                 };
@@ -165,6 +170,7 @@ var ReiSysHackathon;
         })(Controller = Vulcan.Controller || (Vulcan.Controller = {}));
     })(Vulcan = ReiSysHackathon.Vulcan || (ReiSysHackathon.Vulcan = {}));
 })(ReiSysHackathon || (ReiSysHackathon = {}));
+/* creates the instance of the disaster controller */
 var disasterStateController;
 $(document).ready(function () {
     disasterStateController = new ReiSysHackathon.Vulcan.Controller.DisasterStateController();
@@ -180,6 +186,7 @@ var ReiSysHackathon;
                     /* draw states on id #statesvg */
                     this.stateContainerDivId = '#statesvg';
                 }
+                /* takes in the collection of states to draw and what color it should be*/
                 USStatesController.prototype.draw = function (data) {
                     var stateData = new ReiSysHackathon.Vulcan.Model.StatePositionCollection();
                     //calcualte page size
@@ -191,8 +198,6 @@ var ReiSysHackathon;
                     var containerWidth = stateContainer.width();
                     var heightRatio = containerHeight / standardHeight;
                     var widthRatio = containerWidth / standardWidth;
-                    console.log('Width ratio ' + widthRatio);
-                    console.log('Height ratio ' + heightRatio);
                     d3.select(this.stateContainerDivId).selectAll(".state")
                         .data(stateData.statePostionItems).enter().append("path").attr("class", "state")
                         .attr("d", function (d) {
@@ -210,6 +215,7 @@ var ReiSysHackathon;
                         return color;
                     });
                 };
+                /* taks in the collection to be drawn and determines the color it should be filled and than draws and fills the states */
                 USStatesController.prototype.render = function (valueCollection, lightColor, darkColor, maxValue) {
                     var val = 10;
                     var drawCollection = new Array();
@@ -234,12 +240,15 @@ var ReiSysHackathon;
                 function VulcanController() {
                     this.vulcanService = new ReiSysHackathon.Vulcan.Service.VulcanService();
                 }
+                /* Gets the */
                 VulcanController.prototype.GetContext = function () {
                     return this.vulcanService.GetContext();
                 };
+                /* Get the count by incident type */
                 VulcanController.prototype.GetCountByIncidentType = function () {
                     return this.vulcanService.GetCountByIncidentType();
                 };
+                /* Gets the summary counts*/
                 VulcanController.prototype.GetDisasterSumAndCountData = function () {
                     var sumAndCount = this.vulcanService.GetDisasterSumAndCountData();
                     var output = JSON.stringify(sumAndCount.Results.output1);
@@ -249,15 +258,19 @@ var ReiSysHackathon;
                     $('#divSumOfMoneySpentTill2014').html(o1[3]); //3
                     $('#divSumOfMoneySpent2015').html(o1[2]); //2
                 };
+                /* Gets the counts of incidents by year*/
                 VulcanController.prototype.GetIncidentCountByYear = function () {
                     return this.vulcanService.GetIncidentCountByYear();
                 };
+                /* Gets the assistance summary (grant amount) by year*/
                 VulcanController.prototype.AssistanceSummaryByYear = function () {
                     return this.vulcanService.AssistanceSummaryByYear();
                 };
+                /* Gets Disaster information (count an dcost) by state for a given year and type of disaster*/
                 VulcanController.prototype.GetDisasterCountAndSumByState = function () {
                     return this.vulcanService.GetDisasterCountAndSumByState();
                 };
+                /* Gets the disaster prediction results */
                 VulcanController.prototype.GetDisasterPrediction = function () {
                     var dpm = new ReiSysHackathon.Vulcan.Model.DisasterPredictionModel($('#txtDisasterType').val(), $('#txtStartDate').val(), $('#txtEndDate').val());
                     var result = this.vulcanService.GetDisasterPrediction(dpm);
@@ -287,6 +300,7 @@ var ReiSysHackathon;
                 return DisasterColorModel;
             })();
             Model.DisasterColorModel = DisasterColorModel;
+            /* Contains the coloction for the disaster type */
             var DisasterColorCollectionModel = (function () {
                 function DisasterColorCollectionModel() {
                     this.disasterColorModelItems = new Array();
@@ -310,6 +324,7 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
+            /* Container for a year , by state, by disaster type  */
             var DisasterStateMetricsModel = (function () {
                 function DisasterStateMetricsModel(year, state, disasterType, incidentCount, cost) {
                     this.year = year;
@@ -331,6 +346,7 @@ var ReiSysHackathon;
         var Model;
         (function (Model) {
             var DisasterPredictionModel = (function () {
+                /* Holds the Disaster Prediction Model  */
                 function DisasterPredictionModel(DisasterType, StartDate, EndDate) {
                     this.DisasterType = DisasterType;
                     this.StartDate = StartDate;
@@ -349,6 +365,7 @@ var ReiSysHackathon;
         var Model;
         (function (Model) {
             var StateDrawModel = (function () {
+                /* this contains the id (state) and the color it will fill the state */
                 function StateDrawModel(id, color) {
                     this.id = id;
                     this.color = color;
@@ -365,12 +382,15 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
+            /* Object that is used  to contain the plots points for the state drawing*/
             var StatePostitionModel = (function () {
+                /* takes in the name of the commands and a collection of the command points */
                 function StatePostitionModel(id, name, commands) {
                     this.id = id;
                     this.name = name;
                     this.commands = commands;
                 }
+                /* returns the dr point plot string  */
                 StatePostitionModel.prototype.buildState = function (heightRatio, widthRatio) {
                     var toReturn = '';
                     for (var i = 0; i < this.commands.length; i++) {
@@ -386,6 +406,7 @@ var ReiSysHackathon;
                     this.commandType = commandType;
                     this.points = points;
                 }
+                /* Builds a particular path draw point command and returns the string*/
                 PathCommand.prototype.getPathAspect = function (heightRatio, widthRatio) {
                     var toReturn = this.commandType;
                     switch (this.commandType) {
@@ -546,6 +567,7 @@ var ReiSysHackathon;
                     $.ajax(settings);
                     return result;
                 };
+                //gets teh assiments sumamry by year
                 VulcanService.prototype.AssistanceSummaryByYear = function () {
                     var result = undefined;
                     var settings = {
@@ -561,6 +583,7 @@ var ReiSysHackathon;
                     $.ajax(settings);
                     return result;
                 };
+                // Gets teh count and cost and disaster count for a state for a year
                 VulcanService.prototype.GetDisasterCountAndSumByState = function () {
                     var result = undefined;
                     var settings = {

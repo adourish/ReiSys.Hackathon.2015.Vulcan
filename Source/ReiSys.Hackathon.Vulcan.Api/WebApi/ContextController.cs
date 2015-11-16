@@ -1,9 +1,5 @@
 ﻿using ReiSys.Hackathon.Vulcan.Web.Models;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Web;
 using System.Web.Http;
 
 namespace ReiSys.Hackathon.Vulcan.Web.WebApi

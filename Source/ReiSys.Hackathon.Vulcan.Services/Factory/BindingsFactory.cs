@@ -2,11 +2,6 @@
 using ReiSys.Hackathon.Vulcan.Service.Services;
 using ReiSys.Hackathon.Vulcan.Services.Factory;
 using ReiSys.Hackathon.Vulcan.Services.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ReiSys.Hackathon.Vulcan.Services
 {

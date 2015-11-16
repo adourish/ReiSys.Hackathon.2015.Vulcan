@@ -87,7 +87,7 @@ body {
   margin-left: 12px;
   margin-right: 12px;
   padding: 10px 10px 10px 10px;
-  font-size: 1.3em;
+  font-size: 1.2em;
   padding-right: 35px;
 }
 .tile .tile-information .note {
@@ -155,4 +155,12 @@ body {
 }
 .teamLogoText {
   font-size: 0.9em;
+}
+.predictionOutput {
+  font-size: 1.25em;
+  font-weight: bold;
+}
+.memberDescription {
+  font-size: 0.9em;
+  width: 95%;
 }

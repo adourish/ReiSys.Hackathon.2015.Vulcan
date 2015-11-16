@@ -8,8 +8,8 @@
        
         /* draw states on id #statesvg */
         private stateContainerDivId = '#statesvg';
-
-
+        
+        /* takes in the collection of states to draw and what color it should be*/
         draw(data: Array<ReiSysHackathon.Vulcan.Model.StateDrawModel>) {
             var stateData = new ReiSysHackathon.Vulcan.Model.StatePositionCollection();
             //calcualte page size
@@ -21,8 +21,6 @@
             var containerWidth = stateContainer.width();
             var heightRatio = containerHeight / standardHeight;
             var widthRatio = containerWidth / standardWidth;
-            console.log('Width ratio ' + widthRatio);
-            console.log('Height ratio ' + heightRatio);
             d3.select(this.stateContainerDivId).selectAll(".state")
                 .data(stateData.statePostionItems).enter().append("path").attr("class", "state")
                 .attr("d", function (d: ReiSysHackathon.Vulcan.Model.StatePostitionModel) {
@@ -41,6 +39,7 @@
                 });
         }
 
+        /* taks in the collection to be drawn and determines the color it should be filled and than draws and fills the states */
         render(valueCollection: any[], lightColor: string, darkColor: string, maxValue: number) {
             var val = 10;
             var drawCollection = new Array<ReiSysHackathon.Vulcan.Model.StateDrawModel>();

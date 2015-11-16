@@ -34,7 +34,6 @@ module ReiSysHackathon.Vulcan.Controller {
             for (var i = 0; i < disasterTypeCount; i++) {
                 var current = this.disasterColorCollection.disasterColorModelItems[i];
                 if (current.id === disasterType) {
-                    console.log(disasterType);
                     minColor = current.minColor;
                     maxColor = current.maxColor;
                 }
@@ -51,19 +50,20 @@ module ReiSysHackathon.Vulcan.Controller {
             this.usStatesController.render(data, minColor, maxColor, maxValue);
         }
 
+        /* */
         private storedSet: Array<ReiSysHackathon.Vulcan.Model.DisasterStateMetricsModel>;
 
-        private createCleanDataSet(serverData: any) {
+        /* creates the local data object */
+        private createLocalDataObject(serverData: any) {
             this.storedSet = new Array<ReiSysHackathon.Vulcan.Model.DisasterStateMetricsModel>();
             var disasterCount = serverData.length;
             for (var i = 0; i < disasterCount; i++) {
                 var currentItemInSet = serverData[i];
                 this.storedSet.push(new ReiSysHackathon.Vulcan.Model.DisasterStateMetricsModel(currentItemInSet[0], currentItemInSet[1], currentItemInSet[2], currentItemInSet[3], currentItemInSet[4]));
             }
-            console.log('Thomas Look here');
         }
 
-
+        /* returns the collection of states and the cost for a disaster type for a given year */
         private getCost(disasterType: string, year: number) {
             var storedSetCount = this.storedSet.length;
             var data = new Array<any>();
@@ -76,6 +76,7 @@ module ReiSysHackathon.Vulcan.Controller {
             return data;
         }
 
+        /* returns the collection of states and the number of incidents for a disaster type for a given year */
         private getIncidentCount(disasterType: string, year: number) {
             var storedSetCount = this.storedSet.length;
             var data = new Array<any>();
@@ -88,15 +89,15 @@ module ReiSysHackathon.Vulcan.Controller {
             return data;
         }
 
+        /*gets the data to be rendered  */
         private getData(disasterType: string, year: number, dimension: string) {
             if (this.storedSet === null || this.storedSet === undefined) {
                 var serverResultSet = this.vulcanController.GetDisasterCountAndSumByState();
                 var serverData = serverResultSet.Results.output1.value.Values;
-                this.createCleanDataSet(serverData);
+                this.createLocalDataObject(serverData);
 
             }
             var data = new Array<any>();
-            console.log(dimension);
             if (dimension === 'Count') {
                 data = this.getIncidentCount(disasterType, year);
             } else if (dimension === 'Cost') {
@@ -108,6 +109,7 @@ module ReiSysHackathon.Vulcan.Controller {
             return data;
         }
 
+        /* sets up the drop down for the years */
         private setUpSelection() {
             var selectCtrl = $('#yearStateDD');
             var startDate = 2015;
@@ -119,14 +121,17 @@ module ReiSysHackathon.Vulcan.Controller {
             }
         }
 
+        /* change event call for the disaster type drop down */
         disasterTypeDropdownChange(value: string) {
             this.dataChanged();
         }
 
+        /* change event call for the year drop down */
         yearDropdownChange(value: string) {
             this.dataChanged();
         }
 
+        /* change event call for the dimension drop down */
         dimensionDropdownChange(value: string) {
             this.dataChanged();
         }
@@ -135,6 +140,7 @@ module ReiSysHackathon.Vulcan.Controller {
 
     }
 }
+/* creates the instance of the disaster controller */
 var disasterStateController: ReiSysHackathon.Vulcan.Controller.DisasterStateController;
 $(document).ready(function () {
     disasterStateController = new ReiSysHackathon.Vulcan.Controller.DisasterStateController();

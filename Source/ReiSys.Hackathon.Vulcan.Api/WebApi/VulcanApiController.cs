@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using ReiSys.Hackathon.Vulcan.Service.Services;
 using ReiSys.Hackathon.Vulcan.Services;
 using Newtonsoft.Json.Linq;
@@ -18,6 +13,9 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
     [RoutePrefix("api/vulcan")]
     public class VulcanApiController : ApiController
     {
+        /// <summary>
+        /// Read only version of the Vulcan Service
+        /// </summary>
         private readonly IMLRegressionService mlRegressionService;
         /// <summary>
         /// init
@@ -31,7 +29,7 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
         /// easy test
         /// </summary>
         /// <param name="test"></param>
-        /// <returns></returns>
+        /// <returns>returns test to have a basic test to see if the service is up</returns>
         [Route("test")]
         [HttpGet]
         public string Test(string test)
@@ -43,7 +41,7 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
         /// <summary>
         /// Get disasters by route.
         /// </summary>
-        /// <returns></returns>
+        /// <returns> returns JObject of the disaster data</returns>
         [Route("GetDisasterSumAndCountData")]
         [HttpGet]
         public JObject GetDisasterSumAndCountData()
@@ -52,10 +50,11 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
             
             return o;
         }
+
         /// <summary>
         /// get by incident
         /// </summary>
-        /// <returns></returns>
+        /// <returns> returns JObject of the disaster data</returns>
         [Route("GetCountByIncidentType")]
         [HttpGet]
         public JObject GetCountByIncidentType()
@@ -67,7 +66,7 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
         /// <summary>
         /// get incident
         /// </summary>
-        /// <returns></returns>
+        /// <returns> returns JObject of the disaster data</returns>
         [Route("GetIncidentCountByYear")]
         [HttpGet]
         public JObject GetIncidentCountByYear()
@@ -82,7 +81,7 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
         /// <param name="disasterType"></param>
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
-        /// <returns></returns>
+        /// <returns> returns JObject of the predited result</returns>
         [Route("GetDisasterPrediction")]
         [HttpGet]
         public JObject GetDisasterPrediction(string disasterType, string startDate, string endDate)
@@ -94,7 +93,7 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
         /// <summary>
         /// get assistance
         /// </summary>
-        /// <returns></returns>
+        /// <returns> returns JObject of the disaster data</returns>
         [Route("AssistanceSummaryByYear")]
         [HttpGet]
         public JObject AssistanceSummaryByYear()
@@ -102,6 +101,11 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
             var o = JObject.Parse(mlRegressionService.AssistanceSummaryByYear());
             return o;
         }
+
+        /// <summary>
+        /// Gets the
+        /// </summary>
+        /// <returns> returns JObject of the disaster data</returns>
         [Route("DisasterCountAndSumByState")]
         [HttpGet]
         public JObject DisasterCountAndSumByState() {

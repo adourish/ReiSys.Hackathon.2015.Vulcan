@@ -2,7 +2,7 @@
     export class DisasterColorModel {
         constructor(public id: string, public minColor: string, public maxColor: string) { }
     }
-
+    /* Contains the coloction for the disaster type */
     export class DisasterColorCollectionModel {
         public disasterColorModelItems: Array<DisasterColorModel>
         constructor() {
