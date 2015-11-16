@@ -128,6 +128,18 @@ body {
     width: 110px;
     margin-right: 20px;
   }
+  #formPast .form-group select#yearStateDD {
+    width: 85px;
+    margin-right: 20px;
+  }
+  #formPast .form-group select#disasterTypeStateDD {
+    width: 150px;
+    margin-right: 20px;
+  }
+  #formPast .form-group select#dimensionStateDD {
+    width: 90px;
+    margin-right: 20px;
+  }
   .formCenter {
     float: none;
     margin: 0 auto;
