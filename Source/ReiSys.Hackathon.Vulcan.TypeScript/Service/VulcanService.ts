@@ -139,5 +139,25 @@
 
             return result;
         }
+
+        //GetPredictionByIncidentType
+        // get count by incident
+        GetPredictionByIncidentType(dpm: ReiSysHackathon.Vulcan.Model.DisasterTypePredictionModel) {
+            var result = undefined;
+            var settings: JQueryAjaxSettings = {
+                url: this.baseUrl + '/api/vulcan/GetPredictionByIncidentType?state=' + dpm.State + '&county=' + dpm.County + '&year=' + dpm.Year + '',
+                type: "GET",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: false,
+                error: function (xhr, status, error) { console.log(error); },
+                success: function (data) { result = data; },
+                jsonpCallback: 'itDoesntMatterNotAFunction',
+            };
+
+            $.ajax(settings);
+
+            return result;
+        }
     }
 }

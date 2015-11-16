@@ -113,6 +113,16 @@ namespace ReiSys.Hackathon.Vulcan.Web.Controllers
             return o;
         }
 
-
+        /// <summary>
+        /// Gets the
+        /// </summary>
+        /// <returns> returns JObject of the disaster data</returns>
+        [Route("GetPredictionByIncidentType")]
+        [HttpGet]
+        public JObject GetPredictionByIncidentType(string state, string county, string year)
+        {
+            var o = JObject.Parse(mlRegressionService.GetPredictionByIncidentType(state, county, year));
+            return o;
+        }
     }
 }

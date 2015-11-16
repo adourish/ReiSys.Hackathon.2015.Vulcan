@@ -51,5 +51,16 @@
             return ;
         }
 
+        /* Gets the disaster prediction results */
+        GetPredictionByIncidentType() {
+            var dpm = new ReiSysHackathon.Vulcan.Model.DisasterTypePredictionModel($('#txtState').val(), $('#txtCounty').val(), $('#txtYear').val());
+            var result = this.vulcanService.GetPredictionByIncidentType(dpm);
+            var output = JSON.stringify(result.Results.Incident_Type);
+            var o1 = JSON.parse(output).value.Values[0];
+            $('#divOutputByType').html("Predicted Indicator: " + o1);
+            return;
+        }
+
+
     }
 }

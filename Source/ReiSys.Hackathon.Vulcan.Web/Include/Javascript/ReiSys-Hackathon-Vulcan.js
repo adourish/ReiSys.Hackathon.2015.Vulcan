@@ -279,6 +279,15 @@ var ReiSysHackathon;
                     $('#divOutput').html("Predicted State Indicator: " + o1);
                     return;
                 };
+                /* Gets the disaster prediction results */
+                VulcanController.prototype.GetPredictionByIncidentType = function () {
+                    var dpm = new ReiSysHackathon.Vulcan.Model.DisasterTypePredictionModel($('#txtState').val(), $('#txtCounty').val(), $('#txtYear').val());
+                    var result = this.vulcanService.GetPredictionByIncidentType(dpm);
+                    var output = JSON.stringify(result.Results.Incident_Type);
+                    var o1 = JSON.parse(output).value.Values[0];
+                    $('#divOutputByType').html("Predicted Indicator: " + o1);
+                    return;
+                };
                 return VulcanController;
             })();
             Controller.VulcanController = VulcanController;
@@ -324,6 +333,25 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
+            var DisasterPredictionModel = (function () {
+                /* Holds the Disaster Prediction Model  */
+                function DisasterPredictionModel(DisasterType, StartDate, EndDate) {
+                    this.DisasterType = DisasterType;
+                    this.StartDate = StartDate;
+                    this.EndDate = EndDate;
+                }
+                return DisasterPredictionModel;
+            })();
+            Model.DisasterPredictionModel = DisasterPredictionModel;
+        })(Model = Vulcan.Model || (Vulcan.Model = {}));
+    })(Vulcan = ReiSysHackathon.Vulcan || (ReiSysHackathon.Vulcan = {}));
+})(ReiSysHackathon || (ReiSysHackathon = {}));
+var ReiSysHackathon;
+(function (ReiSysHackathon) {
+    var Vulcan;
+    (function (Vulcan) {
+        var Model;
+        (function (Model) {
             /* Container for a year , by state, by disaster type  */
             var DisasterStateMetricsModel = (function () {
                 function DisasterStateMetricsModel(year, state, disasterType, incidentCount, cost) {
@@ -345,16 +373,16 @@ var ReiSysHackathon;
     (function (Vulcan) {
         var Model;
         (function (Model) {
-            var DisasterPredictionModel = (function () {
+            var DisasterTypePredictionModel = (function () {
                 /* Holds the Disaster Prediction Model  */
-                function DisasterPredictionModel(DisasterType, StartDate, EndDate) {
-                    this.DisasterType = DisasterType;
-                    this.StartDate = StartDate;
-                    this.EndDate = EndDate;
+                function DisasterTypePredictionModel(State, County, Year) {
+                    this.State = State;
+                    this.County = County;
+                    this.Year = Year;
                 }
-                return DisasterPredictionModel;
+                return DisasterTypePredictionModel;
             })();
-            Model.DisasterPredictionModel = DisasterPredictionModel;
+            Model.DisasterTypePredictionModel = DisasterTypePredictionModel;
         })(Model = Vulcan.Model || (Vulcan.Model = {}));
     })(Vulcan = ReiSysHackathon.Vulcan || (ReiSysHackathon.Vulcan = {}));
 })(ReiSysHackathon || (ReiSysHackathon = {}));
@@ -604,6 +632,23 @@ var ReiSysHackathon;
                     var result = undefined;
                     var settings = {
                         url: this.baseUrl + '/api/vulcan/GetDisasterPrediction?disasterType=' + dpm.DisasterType + '&startDate=' + dpm.StartDate + '&endDate=' + dpm.EndDate + '',
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        async: false,
+                        error: function (xhr, status, error) { console.log(error); },
+                        success: function (data) { result = data; },
+                        jsonpCallback: 'itDoesntMatterNotAFunction',
+                    };
+                    $.ajax(settings);
+                    return result;
+                };
+                //GetPredictionByIncidentType
+                // get count by incident
+                VulcanService.prototype.GetPredictionByIncidentType = function (dpm) {
+                    var result = undefined;
+                    var settings = {
+                        url: this.baseUrl + '/api/vulcan/GetPredictionByIncidentType?state=' + dpm.State + '&county=' + dpm.County + '&year=' + dpm.Year + '',
                         type: "GET",
                         contentType: "application/json; charset=utf-8",
                         dataType: "json",

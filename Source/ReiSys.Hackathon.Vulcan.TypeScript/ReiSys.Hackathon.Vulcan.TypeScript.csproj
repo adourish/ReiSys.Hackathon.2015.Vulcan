@@ -44,6 +44,7 @@
     <TypeScriptCompile Include="External\jquery.ts" />
     <TypeScriptCompile Include="External\d3.d.ts" />
     <TypeScriptCompile Include="Model\DisasterColorModel.ts" />
+    <TypeScriptCompile Include="Model\DisasterTypePredictionModel.ts" />
     <TypeScriptCompile Include="Model\DisasterStateMetricsModel.ts" />
     <TypeScriptCompile Include="Model\DisasterPredictionModel.ts" />
     <TypeScriptCompile Include="Model\StateDrawModel.ts" />
